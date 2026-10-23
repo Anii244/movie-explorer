@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Play, Plus, Heart, Star } from "lucide-react";
 import { useState } from "react";
-const IMAGE_URL = "https://image.tmdb.org/t/p/original";
+
 export default function Hero({ movie }) {
   const [favorite, setFavorite] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -12,8 +12,7 @@ export default function Hero({ movie }) {
       className="relative flex min-h-[390px] items-center overflow-hidden bg-cover bg-center md:min-h-[450px]"
       style={{
         backgroundImage: `linear-gradient(90deg, #030b13 0%, rgba(3,11,19,.92) 30%, rgba(3,11,19,.35) 75%, rgba(3,11,19,.2) 100%), url(${IMAGE_URL}${movie.backdrop_path || movie.poster_path || ""})`,
-      }}
-    >
+      }}>
       <div className="max-w-2xl px-6 py-12 md:px-12">
         <span className="rounded-full bg-slate-800 px-3 py-1 text-xs">
           FEATURED

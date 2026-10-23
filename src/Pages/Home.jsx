@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import MovieSection from "../components/MovieSection";
-import { getMovies } from "../services/movieApi";
+import {getMovies} from "./services/MovieApi";
 const sections = [
   {
     id: "trending",

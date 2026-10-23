@@ -1,19 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X,Clapperboard,Search,Bell,ChevronDown,UserRound,Settings,CircleHelp,LogOut } from "lucide-react";
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [search, setSearch] = useState("");
-
   const links = [
     { name: "Home", path: "/" },
     { name: "Movies", path: "/movies/trending" },
     { name: "Watchlist", path: "/watchlist" },
     { name: "Favorites", path: "/favorites" },
   ];
-
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-[#030b13]/95 backdrop-blur-md">
       <div className="flex min-h-[58px] items-center gap-4 px-4 md:gap-6 md:px-6">
@@ -70,8 +67,6 @@ export default function Navbar() {
             />
           </button>
         </form>
-
-        {/* Notifications */}
         <button
           aria-label="Notifications"
           className="relative hidden shrink-0 text-slate-300 hover:text-white sm:block"
@@ -79,8 +74,6 @@ export default function Navbar() {
           <Bell size={20} />
           <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-red-500" />
         </button>
-
-        {/* Profile Dropdown */}
         <div className="relative shrink-0">
           <button
             onClick={() => setProfileOpen(!profileOpen)}
@@ -89,7 +82,7 @@ export default function Navbar() {
             aria-expanded={profileOpen}
           >
             <img
-              src="https://i.pravatar.cc/80?img=12"
+              // src="https://i.pravatar.cc/80?img=12"
               alt="Profile"
               className="h-8 w-8 rounded-full border border-slate-600 object-cover"
             />
@@ -103,7 +96,7 @@ export default function Navbar() {
             <div className="absolute right-0 top-12 w-56 rounded-xl border border-slate-700 bg-[#101b27] p-3 shadow-2xl">
               <div className="mb-2 flex items-center gap-3 border-b border-slate-700 pb-3">
                 <img
-                  src="https://i.pravatar.cc/80?img=12"
+                  // src="https://i.pravatar.cc/80?img=12"
                   alt=""
                   className="h-9 w-9 rounded-full"
                 />
